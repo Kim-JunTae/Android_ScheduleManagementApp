@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".MainActivity"
+    android:padding="16dp">
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/spinner_category"/>
+        <EditText
+            android:id="@+id/memo"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:hint="작성란"
+            android:layout_below="@id/spinner"/>
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="등록"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:background="@drawable/bg_logo"
+            android:layout_below="@id/spinner"
+            android:layout_toRightOf="@id/memo"
+            android:layout_marginLeft="16dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_below="@id/memo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
